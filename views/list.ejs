@@ -1,0 +1,38 @@
+<%- include('header'); -%>
+
+    <div class="form-head">
+        <form action="/" method="POST">
+            <div class="meal-list">
+                <h2>
+                    <%= mealList %>
+                </h2>
+            </div>
+
+            <div class="list-items">
+                <ul>
+                    <% for (var i = 0; i<newItems.length; i++){ %>
+                        <div class="items">
+                            <p>
+                                <input type="checkbox">
+                                <%= newItems[i] %>
+                            </p </div>
+                            <% } %>
+                </ul>
+                </div>
+                <div class="input-value">
+                    <input type="text" name="newitem">
+                    <button type="submit" name="list" value=<%=mealList %>Add</button>
+                </div>
+
+
+        </form>
+        </div>
+
+
+        <div class="box" id="heading">
+            <h1>
+                <%= currentday %>
+            </h1>
+        </div>
+
+        <%- include('footer'); -%>
